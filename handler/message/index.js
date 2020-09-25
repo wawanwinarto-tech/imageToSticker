@@ -55,6 +55,9 @@ module.exports = msgHandler = async (client = new Client(), message) => {
         case 'tnc':
             await client.sendText(from, menuId.textTnC())
             break
+        case 'menulain':
+            client.sendText(from, '► Menu Donasi,About, Dan S&K: \n1. *#about* \n```Informasi Tentang Bot Ini``` \n \n2. *#donasi* \n```Informasi Jika Kalian Ingin Berdonasi Silakan Seikhlasnya Saja,Syukur-Syukur Bisa Buat Beli Makan``` \n \n3. *#tnc* \n```Show The Terms and Conditions```')
+            break
         case 'menu':
         case 'help':
             await client.sendText(from, menuId.textMenu(pushname))
